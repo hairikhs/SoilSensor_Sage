@@ -1,0 +1,13 @@
+name: "soiltest_wired"
+version: "0.1.1"
+description: "soiltest_wired"
+keywords: ""
+authors: "hairik"
+collaborators: ""
+funding: ""
+license: ""
+homepage: ""
+source:
+  architectures:
+    - "linux/amd64"
+    - "linux/arm64"
