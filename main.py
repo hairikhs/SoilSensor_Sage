@@ -11,7 +11,7 @@ logging.basicConfig(
 
 # Open the serial port
 try:
-    ser = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+    ser = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
     logging.info(f"Opened serial port: {ser.name}")
 except serial.SerialException as e:
     logging.error(f"Failed to open serial port: {e}")
@@ -47,6 +47,8 @@ try:
                 except ValueError:
                     logging.error(f"Invalid value for {name}: {value}")
                     continue
+
+                logging.info(f"Post processed name and value: {name}, {value}")
 
 
                 # NOTE: optionally, you can add metadata to the value
